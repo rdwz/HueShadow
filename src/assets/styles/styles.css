@@ -1,4 +1,8 @@
+/* Fonts import */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap');
+
+/* Global Resets */
 
 *, *::before, *::after {
     margin: 0;
@@ -21,6 +25,8 @@ button, input {
 button {
     cursor: pointer;
 }
+
+/* HueShadow - Colour Palette Generator */
 
 .palette-generator {
     font-family: 'Montserrat', sans-serif;

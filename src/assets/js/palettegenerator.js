@@ -5,13 +5,14 @@ class Colour {
         this.locked = false;
     }
 
+    // Apply hex style to the container
     setHex(hex) {
         this.hex = hex;
         this.element.style.backgroundColor = hex;
-        // console.log(this.element.style.backgroundColor);
         this.element.querySelector('.palette-colour-input').value = hex;
     }
 
+    // Container lock logic
     setLocked(locked) {
         this.locked = locked;
         if(locked) {
@@ -26,10 +27,12 @@ class Colour {
         }
     }
 
+    // Toggle the container lock
     toggleLocked () {
         this.setLocked(!this.locked);
     }
 
+    // Generate random hex colour
     generateHex() {
         if(this.locked) {
             return;
@@ -44,6 +47,7 @@ class Colour {
         this.setHex(hex);
     }
 
+    // Copy to clipboard function
     copyToClipBoard() {
         const input = this.element.querySelector(".palette-colour-input");
         input.select();
@@ -59,6 +63,7 @@ class Colour {
     }
 }
 
+// Select all containers to apply the business logic
 const colour_elements = document.querySelectorAll(".palette-colours .palette-colour");
 
 const colours = [];
@@ -82,16 +87,18 @@ for (let i = 0; i < colour_elements.length; i++) {
     colours.push(colour);
 }
 
+// Change colour palette when space button is clicked on the screen
 document.querySelector(".palette-colour-toggle-button").addEventListener("click", () => {
     for (let i = 0; i < colours.length; i++) {
         colours[i].generateHex();
     }
 })
 
+// Change colour palette when spacebar is pressed
 document.addEventListener("keypress", (e) => {
     if(e.code.toLowerCase() === "space") {
         for (let i = 0; i < colours.length; i++) {
-        colours[i].generateHex();
-    }
+            colours[i].generateHex();
+        }
     }
 })
