@@ -79,20 +79,29 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    border: 2px solid transparent;
+    border: 5px solid transparent;
     border-radius: 1rem;
     background-color: #FC466B;
     transition: 0.4s ease-out;
     color: white;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .palette-colour.copied {
-    border-color: #3F5EFB;
+    border-color: black;
 }
 
 .palette-lock-toggle {
     opacity: 0.6;
     transition: 0.4s;
+    background-color: #ffffff36;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: 0.4s ease-out;
+}
+
+.palette-lock-toggle:hover, .palette-lock-toggle.is-locked:hover {
+    transform: scale(1.1);
 }
 
 .palette-lock-toggle.is-locked {
@@ -102,6 +111,20 @@ button {
 .palette-colour-input {
     text-align: center;
     margin: 0.5rem 0;
+    background-color: #ffffff59;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.palette-copy-hex {
+    background-color: #ffffff36;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: 0.4s ease-out;
+}
+
+.palette-copy-hex:hover {
+    transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
