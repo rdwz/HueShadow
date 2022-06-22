@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--Custom Styles-->
+    <link rel="stylesheet" href="../assets/styles/styles.css">
 
     <title>HueShadow - Gradient Generator</title>
 </head>
@@ -26,7 +29,7 @@
         </div>
         <div class="gradient-direction-options">
             <button><i class="fa-solid fa-arrow-up"></i></button>
-            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-up"></i></button>
+            <button class="gradient-direction-option-rotate active"><i class="fa-solid fa-arrow-up"></i></button>
             <button><i class="fa-solid fa-arrow-right"></i></button>
             <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-right"></i></button>
             <button><i class="fa-solid fa-arrow-down"></i></button>
@@ -37,8 +40,8 @@
         </div>
         <button class="gradient-generate-button">Generate Gradient</button>
         <div class="gradient-output-container">
-            <p class="gradient-output-code"></p>
-            <button class="gradient-output-code-copy">Copy CSS</button>
+            <p class="gradient-output-code-label">CSS Code&nbsp;:</p>
+            <code class="gradient-output-code">background: linear-gradient(to bottom left, #FC466B 0%, #3F5EFB 100%);</code>
         </div>
     </div>
 </body>

@@ -10,10 +10,6 @@
     box-sizing: border-box;
 }
 
-i {
-    color: white;
-}
-
 button, input {
     appearance: none;
     border: none;
@@ -35,7 +31,6 @@ button {
 
 .palette-container {    
     padding: 4rem 3rem;
-    /* max-width: 90%; */
 }
 
 .palette-heading {
@@ -114,6 +109,10 @@ button {
     opacity: 1;
 }
 
+.palette-lock-toggle > i {
+    color: white;
+}
+
 .palette-colour-input {
     text-align: center;
     margin: 0.5rem 0;
@@ -160,4 +159,154 @@ button {
         text-align: center;
         margin: 3rem 0.5rem;
     }
+}
+
+/* HueShadow - Gradient Generator */
+
+.gradient-generator {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-container {
+    width: 40%;
+    height: 55vh;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.4);
+}
+
+.gradient-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(9, 18, 70);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.gradient-toggle {
+    color: #5e5e5e;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gradient-toggle-button {
+    font-size: inherit;
+    font-weight: 700;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.4s ease-out;
+}
+
+.gradient-toggle-button:hover {
+    padding: 0 0.5rem;
+}
+
+.gradient-colour-options {
+    display: flex;
+    margin: 0 auto 2rem;
+    width: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    width: 5rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 1rem;
+    border: none;
+}
+
+.gradient-direction-options {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 2rem;
+}
+
+.gradient-direction-options button {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: transparent;
+    border: 1px solid #5e5e5e;
+    color: #5e5e5e;
+    border-radius: 1rem;
+    transition: 0.4s ease-out
+}
+
+.gradient-direction-options button:hover {
+    transform: scale(1.1);
+}
+
+.gradient-direction-option-rotate i {
+    transform: rotate(45deg);
+}
+
+.gradient-direction-options .active {
+    border: none;
+    background-color: #5e5e5e;
+    color: #ffffff;
+}
+
+.gradient-generate-button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #5e5e5e;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 1rem;
+    transition: 0.4s ease-out
+}
+
+.gradient-generate-button:hover {
+    transform: scale(1.1);
+}
+
+.gradient-output-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    color: #ffffff;
+}
+
+.gradient-output-code-label {
+    padding-left: 1rem;
+    padding-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.gradient-output-code {
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    word-wrap: break-word;
+    font-weight: 500;
+    border-left: 3px solid #ffffff;
+    border-radius: 0.5rem;
+    background-color: rgba(0,0,0,0.1);
 }
