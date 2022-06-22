@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>HueShadow - Gradient Generator</title>
+</head>
+
+<body class="gradient-generator">
+    <div class="gradient-container">
+        <h1 class="gradient-heading">Gradient Generator</h1>
+        <p class="gradient-toggle">
+            Press [<button class="gradient-toggle-button">&nbsp;Space&nbsp;</button>] to generate a new random gradient.
+        </p>
+        <div class="gradient-colour-options">
+            <input type="color" id="gradient-colour-one" value="#efd5ff">
+            <input type="color" id="gradient-colour-two" value="#515ada">
+        </div>
+        <div class="gradient-direction-options">
+            <button><i class="fa-solid fa-arrow-up"></i></button>
+            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-up"></i></button>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-right"></i></button>
+            <button><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-down"></i></button>
+            <button><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-left"></i></button>
+            <button><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <button class="gradient-generate-button">Generate Gradient</button>
+        <div class="gradient-output-container">
+            <p class="gradient-output-code"></p>
+            <button class="gradient-output-code-copy">Copy CSS</button>
+        </div>
+    </div>
+</body>
+
+</html>
