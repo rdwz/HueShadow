@@ -17,33 +17,34 @@
     <title>HueShadow - Gradient Generator</title>
 </head>
 
-<body class="gradient-generator">
+<body class="gradient-generator" id="gradient-generator">
     <div class="gradient-container">
         <h1 class="gradient-heading">Gradient Generator</h1>
         <p class="gradient-toggle">
-            Press [<button class="gradient-toggle-button">&nbsp;Space&nbsp;</button>] to generate a new random gradient.
+            Press [<button class="gradient-toggle-button" onclick="generateRandomGradient()">&nbsp;Space&nbsp;</button>] to generate a new random gradient.
         </p>
         <div class="gradient-colour-options">
             <input type="color" id="gradient-colour-one" value="#efd5ff">
             <input type="color" id="gradient-colour-two" value="#515ada">
         </div>
         <div class="gradient-direction-options">
-            <button><i class="fa-solid fa-arrow-up"></i></button>
-            <button class="gradient-direction-option-rotate active"><i class="fa-solid fa-arrow-up"></i></button>
-            <button><i class="fa-solid fa-arrow-right"></i></button>
-            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-right"></i></button>
-            <button><i class="fa-solid fa-arrow-down"></i></button>
-            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-down"></i></button>
-            <button><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-left"></i></button>
-            <button><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button onclick="setDirection('to top', this)"><i class="fa-solid fa-arrow-up"></i></button>
+            <button onclick="setDirection('to top right', this)" class="gradient-direction-option-rotate active"><i class="fa-solid fa-arrow-up"></i></button>
+            <button onclick="setDirection('to right', this)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button onclick="setDirection('to bottom right', this)" class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-right"></i></button>
+            <button onclick="setDirection('to bottom', this)"><i class="fa-solid fa-arrow-down"></i></button>
+            <button onclick="setDirection('to bottom left', this)" class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-down"></i></button>
+            <button onclick="setDirection('to left', this)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="setDirection('to top left', this)" class="gradient-direction-option-rotate"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="setDirection('radial', this)"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
-        <button class="gradient-generate-button">Generate Gradient</button>
+        <button class="gradient-generate-button" onClick="generateGradient()">Generate Gradient</button>
         <div class="gradient-output-container">
-            <p class="gradient-output-code-label">CSS Code&nbsp;:</p>
-            <code class="gradient-output-code">background: linear-gradient(to bottom left, #FC466B 0%, #3F5EFB 100%);</code>
+            <p class="gradient-output-code-label">CSS Code&nbsp;: &nbsp;<span id="gradient-output-code-copied">Copied!</span></p>
+            <code class="gradient-output-code" id="gradient-output-code" onclick="copyGradientCSS()">background: linear-gradient(to top right, #FC466B 0%, #3F5EFB 100%);</code>
         </div>
     </div>
+    <script src="../assets/js/gradientgenerator.js"></script>
 </body>
 
 </html>
