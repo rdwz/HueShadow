@@ -3,7 +3,7 @@ let secondColour = document.getElementById("gradient-colour-two");
 let currentDirection = 'to top right';
 const gradientCss = document.getElementById("gradient-output-code");
 
-document.getElementsByTagName("body")[0].style.backgroundImage = `linear-gradient(${currentDirection}, ${firstColour.value}, ${secondColour.value})`;
+document.getElementsByTagName("body")[0].style.backgroundImage = `linear-gradient(${currentDirection}, ${firstColour.value.toString().toUpperCase()}, ${secondColour.value.toString().toUpperCase()})`;
 
 // Set direction for the gradient
 function setDirection(value, _this) {
@@ -18,13 +18,13 @@ function setDirection(value, _this) {
 // Generate a gradient, apply to background and insert code on the screen
 function generateGradient() {
     if(currentDirection == "radial") {
-        gradientCss.innerText = `background: radial-gradient(${firstColour.value}, ${secondColour.value});`
+        gradientCss.innerText = `background: radial-gradient(${firstColour.value.toString().toUpperCase()}, ${secondColour.value.toString().toUpperCase()});`
 
-        document.getElementsByTagName("body")[0].style.backgroundImage = `radial-gradient(${firstColour.value}, ${secondColour.value})`;
+        document.getElementsByTagName("body")[0].style.backgroundImage = `radial-gradient(${firstColour.value.toString().toUpperCase()}, ${secondColour.value.toString().toUpperCase()})`;
     } else {
-        gradientCss.innerText = `background: linear-gradient(${currentDirection}, ${firstColour.value}, ${secondColour.value});`
+        gradientCss.innerText = `background: linear-gradient(${currentDirection}, ${firstColour.value.toString().toUpperCase()}, ${secondColour.value.toString().toUpperCase()});`
 
-        document.getElementsByTagName("body")[0].style.backgroundImage = `linear-gradient(${currentDirection}, ${firstColour.value}, ${secondColour.value})`;
+        document.getElementsByTagName("body")[0].style.backgroundImage = `linear-gradient(${currentDirection}, ${firstColour.value.toString().toUpperCase()}, ${secondColour.value.toString().toUpperCase()})`;
     }
 }
 
