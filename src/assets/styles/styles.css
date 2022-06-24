@@ -316,3 +316,39 @@ input[type="color"]::-webkit-color-swatch {
     color: green;
     display: none;
 }
+
+@media (min-width: 576px) {
+    body{
+        font-size: 12px;
+    }
+    .gradient-container {
+        width: 90%;
+        height: 60vh;
+    }
+}
+@media (min-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    .gradient-container {
+        width: 80%;
+        height: 60vh;
+    }
+}
+@media (min-width: 1024px) {}
+.gradient-container {
+    width: 60%;
+    height: 60vh;
+}
+@media (min-width: 1200px) {
+    .gradient-container {
+        width: 50%;
+        height: 60vh;
+    }
+}
+@media (min-width: 1400px) {
+    .gradient-container {
+        width: 40%;
+        height: 60vh;
+    }
+}
