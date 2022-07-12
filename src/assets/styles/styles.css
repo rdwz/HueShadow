@@ -21,6 +21,49 @@ button, input {
 button {
     cursor: pointer;
 }
+/* HueShadow Landing Page */
+
+.main {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+.main-container {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main-heading {
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-items > a {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #5e5e5e;
+    border-radius: 0.5rem;
+}
 
 /* HueShadow - Colour Palette Generator */
 
